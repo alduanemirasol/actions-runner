@@ -11,4 +11,8 @@ services:
       RUNNER_LABELS: ${RUNNER_LABELS}
 
     volumes:
+      - runner-data:/actions-runner
       - /var/run/docker.sock:/var/run/docker.sock
+
+volumes:
+  runner-data:
