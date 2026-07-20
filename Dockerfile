@@ -6,11 +6,11 @@ ENV RUNNER_ALLOW_RUNASROOT=1
 ENV RUNNER_URL=https://github.com/actions/runner/releases/download
 
 RUN apt-get update
-
 RUN apt-get install -y ca-certificates
 RUN apt-get install -y curl
 RUN apt-get install -y git
 RUN apt-get install -y libicu74
+RUN apt-get install -y docker.io
 
 RUN rm -rf /var/lib/apt/lists/*
 

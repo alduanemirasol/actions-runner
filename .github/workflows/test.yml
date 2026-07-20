@@ -29,14 +29,11 @@ jobs:
       - name: List project files
         run: ls -la
 
-      - name: Create test file
-        run: echo "Hello from GitHub Actions!" > test.txt
-
-      - name: Read test file
-        run: cat test.txt
-
       - name: Show Docker version
         run: docker --version
+
+      - name: Test Docker
+        run: docker run --rm hello-world
 
       - name: Success
         run: echo "Self-hosted runner is working!"
